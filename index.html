@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Calculadora de Juros Compostos</title>
+	</head>
+	<body>
+		<h1>Calculadora de Juros Compostos</h1>
+		<form class="juros_comp">
+			<label>Capital Inicial:</label>
+			<input type="number" name="aplic_inicial">
+
+			<label>Valor aplicado mensalmente:</label>
+			<input type="number" name="aplic_mensal">
+
+			<label>Tempo da aplicação:</label>
+			<input type="number" name="tempo">	
+
+			<fieldset class="conferindo">
+				<legend>Período em?</legend>
+	            <label for="radio-mes"><input type="radio" name="data" value="mes" id="radio-mes" checked>Meses</label>
+	            <label for="radio-ano"><input type="radio" name="data" value="ano" id="radio-ano">Anos</label>
+	        </fieldset>
+
+			<label>Taxa:</label>
+			<input type="number" name="taxa">
+
+			<fieldset class="conferindo">
+				<legend>Juros em?</legend>
+	            <label for="radio-mes"><input type="radio" name="juro" value="mes" id="radio-jmes" checked>Meses</label>
+	            <label for="radio-ano"><input type="radio" name="juro" value="ano" id="radio-jano">Anos</label>
+	        </fieldset>
+
+			<input class="botao" type="button" name="butao" value="Calcular">
+		</form>
+
+		<span class="titulo_resultado1 invisivel">Valor Investido: R$ </span>
+		<span class="valor_investido"></span><br />
+		
+		<span class="titulo_resultado2 invisivel">Total de Juros: R$ </span>
+		<span class="juros"></span><br />
+		
+		<span class="titulo_resultado3 invisivel">Total com juros: R$ </span>
+		<span class="resultado"></span>
+
+		<script src="main.js"></script>
+	</body>
+</html>
