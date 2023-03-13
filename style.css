@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+body {
+	font-family: 'Barlow', sans-serif;;
+}
+
+/*CALCULADORA*/
+div#calculadora {
+	width: 40%;
+	background: #cccccc;
+	margin: 3em auto;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#calculadora h1 {
+	font-size: 1.4em;
+	font-weight: bold;
+	padding: 1em;
+}
+
 .invisivel {
 	display: none;
 }
@@ -7,14 +28,15 @@ span {
 }
 
 form {
-	font-size: 1.3em;
+	font-size: 1.2em;
 }
 
 form fieldset {
-	width: 8%;
+	width: 30%;
 	border: 1px solid;
 	border-radius: 5px;
 	margin: 0.5%;
+	margin: 0 auto;
 }
 
 form label, form legend {
@@ -23,8 +45,13 @@ form label, form legend {
 }
 
 form input {
-	width: 15%;
+	width: 14em;
 	padding: 0.3%;
 	border: 1px solid;
 	border-radius: 5px;
+}
+
+.botao {
+	width: 250px;
+	height: 50px;
 }
