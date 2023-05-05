@@ -1,26 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
 body {
-	font-family: 'Barlow', sans-serif;;
+	font-family: 'Barlow', sans-serif;
+	background: linear-gradient(90deg,#125da3, #2285e1);
 }
 
 /*CALCULADORA*/
-div#calculadora {
-	width: 40%;
-	background: #cccccc;
-	margin: 3em auto;
-	text-align: center;
-	border-radius: 10px;
+section {
+	width: 65%;
+	display: flex;
+	margin: 2% auto;
+	height: 600px;
+	background: #663398;
+	border-radius: 4px;
+	color:#ffffff;
 }
 
-#calculadora h1 {
+div#calculadora, div#investimentos {
+	width: 50%;
+	padding: 3em;
+}
+
+div#investimentos {
+	border-right: 1px;
+	border-style: solid;
+}
+
+h1 {
 	font-size: 1.4em;
 	font-weight: bold;
-	padding: 1em;
-}
-
-.invisivel {
-	display: none;
+	padding: 2em 0;
+	text-align: center;
 }
 
 span {
@@ -28,30 +38,100 @@ span {
 }
 
 form {
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
-
-form fieldset {
-	width: 30%;
-	border: 1px solid;
-	border-radius: 5px;
-	margin: 0.5%;
+/*TABELA*/
+table {
 	margin: 0 auto;
 }
 
-form label, form legend {
-	display: block;
-	margin: 0.5%;
+section tr {
+	height: 50px;
+	vertical-align: center;
 }
 
-form input {
-	width: 14em;
-	padding: 0.3%;
+.titulos_linhas {
+	width: 50.5%;
+	font-weight: bold;
+}
+
+.input_linhas_escolha{
+	font-weight: bold;
+	width: 20%;
+}
+
+.input_linhas_num input{
+	width: 200%;
+	height: 30px;
+	font-size: 0.8em;
+	border-style: none;
+	border-radius: 6px;
+	padding: 3px 5px;
+}
+
+input[type=number]{
+	appearance: textfield;
+}
+
+/*INVESTIME*/
+#investimentos table{
+	margin: 0 auto;
+}
+#investimentos td{
+	font-size: 1.4em;
+	width: 50%;
+}
+
+form fieldset {
 	border: 1px solid;
 	border-radius: 5px;
 }
 
-.botao {
-	width: 250px;
-	height: 50px;
+fieldset label {
+	position: relative;
+	display: inline;
 }
+
+.conferindo{
+	border-style: none;
+}
+
+
+
+/*BOTÃO*/
+#botao {
+	width: 30%;
+	margin: 15px auto;
+	padding: 10px;
+}
+div .botao {
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+	font-family: 'Barlow', sans-serif;
+	font-weight: bold;
+	border-radius: 100px;
+	border-color: #ffffff;
+	background-color: #663398;
+	color: #ffffff;
+}
+
+/*RESULTADO FINAL*/
+div#resultadofinal {
+	padding: 0.5em;
+	border-radius: 3px;
+	width: 30%;
+	margin: 0 auto;
+	margin-bottom: 2%;
+	color:#ffffff;
+	background-color: #663398;
+}
+
+.titulo_resultado {
+	font-weight: bold;
+}
+
+.invisivel {
+	display: none;
+}
+

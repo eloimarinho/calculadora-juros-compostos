@@ -8,47 +8,83 @@
 		<title>Calculadora de Juros Compostos</title>
 	</head>
 	<body>
-		<div id="calculadora">
-			<h1>Calculadora de Juros Compostos</h1>
-			<form class="juros_comp">
-				<label>Capital Inicial:</label>
-				<input type="number" name="aplic_inicial">
+		<section>
+			<div id="investimentos">
+				<h1>Principais indicadore do Brasil</h1>
+				<table>
+					<tbody>
+						<tr>
+							<td>Selic: </td>
+							<td class="selic"></td>
+						</tr>
+						<tr>
+							<td>Poupança: </p></td>
+							<td class="poupanca"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="calculadora">
+				<h1>Calculadora de Juros Compostos</h1>
+				<form class="juros_comp">
+					<table>
+						<tbody>
+							<tr>
+								<td class="titulos_linhas"><label>Valor Inicial:</label></td>
+								<td class="input_linhas_num"><input type="number" name="aplic_inicial"></td>
+							</tr>
+							<tr>
+								<td class="titulos_linhas"><label>Valor Mensal:</label></td>
+								<td class="input_linhas_num"><input type="number" name="aplic_mensal"></td>
+							</tr>
+							<tr>
+								<td class="titulos_linhas"><label>Tempo da aplicação:</label></td>
+								<td class="input_linhas_num"><input type="number" name="tempo"></br></td>
+							</tr>
+							<tr>
+								<fieldset class="conferindo">
+									<td class="titulos_linhas"><legend>Período em:</legend></td>
+									<td class="input_linhas_escolha"><label for="radio-mes"><input type="radio" name="data" value="mes" id="radio-mes" checked> Meses</label></td>
+									<td class="input_linhas_escolha"><label for="radio-ano"><input type="radio" name="data" value="ano" id="radio-ano"> Anos</label></td>
+								</fieldset>
+							</tr>
+							<tr>
+								<td class="titulos_linhas"><label>Taxa:</label></td>
+								<td class="input_linhas_num"><input type="number" name="taxa"></td>
+							</tr>
+							<tr>
+								<fieldset class="conferindo">
+									<td class="titulos_linhas"><legend>Juros em:</legend></td>
+									<td class="input_linhas_escolha"><label for="radio-mes"><input type="radio" name="juro" value="mes" id="radio-jmes" checked> Mês</label></td>
+									<td class="input_linhas_escolha"><label for="radio-ano"><input type="radio" name="juro" value="ano" id="radio-jano"> Ano</label></td>
+								</fieldset>
+							</tr>
+						</tbody>
+					</table>
+					<div id="botao"><input class="botao" type="button" name="butao" value="CALCULAR"></div>
+				</form>
 
-				<label>Valor aplicado mensalmente:</label>
-				<input type="number" name="aplic_mensal">
+			</div>
+		</section>
 
-				<label>Tempo da aplicação:</label>
-				<input type="number" name="tempo">	
-
-				<fieldset class="conferindo">
-					<legend>Período em?</legend>
-					<label for="radio-mes"><input type="radio" name="data" value="mes" id="radio-mes" checked>Meses</label>
-					<label for="radio-ano"><input type="radio" name="data" value="ano" id="radio-ano">Anos</label>
-				</fieldset>
-
-				<label>Taxa:</label>
-				<input type="number" name="taxa">
-
-				<fieldset class="conferindo">
-					<legend>Juros em?</legend>
-					<label for="radio-mes"><input type="radio" name="juro" value="mes" id="radio-jmes" checked>Meses</label>
-					<label for="radio-ano"><input type="radio" name="juro" value="ano" id="radio-jano">Anos</label>
-				</fieldset>
-
-				<input class="botao" type="button" name="butao" value="Calcular">
-			</form>
-		</div>
-		<div id="resultado">
-			<span class="titulo_resultado1 invisivel">Valor Investido: R$ </span>
-			<span class="valor_investido"></span><br />
-			
-			<span class="titulo_resultado2 invisivel">Total de Juros: R$ </span>
-			<span class="juros"></span><br />
-			
-			<span class="titulo_resultado3 invisivel">Total com juros: R$ </span>
-			<span class="resultado"></span>
+		<div id="resultadofinal" class="invisivel">
+			<table>
+				<tr>
+					<td><span class="titulo_resultado">Valor Investido: </span></td>
+					<td><span class="valor_investido"></span></td>
+				</tr>
+				<tr>		
+					<td><span class="titulo_resultado">Total de Juros: </span></td>
+					<td><span class="juros"></span></td>
+				</tr>
+				<tr>	
+					<td><span class="titulo_resultado">Total com juros: </span></td>
+					<td><span class="resultado"></span></td>
+				</tr>
+			</table>
 		</div>
 		
 		<script src="main.js"></script>
+		<script src="json.js"></script>
 	</body>
 </html>

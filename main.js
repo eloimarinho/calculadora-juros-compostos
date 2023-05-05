@@ -28,21 +28,25 @@ botao.addEventListener("click" , function(event){
 		};
 	};
 	calcular += valores.valorAplicacao;
-	calcular = `${calcular.toFixed(2)}`;
+	//calcular = `${calcular}`;
 	var juros = calcular - valorInvestido;
-	publicarResultado(calcular,valorInvestido,juros);
+	publicarResultado(calcular, juros, valorInvestido);
+	
 });
 
-function publicarResultado(calcular,valorInvestido,juros){	
-	if (calcular > 0){
+function publicarResultado(total, totalDeJuros, investimento){	
+	if (total > 0){
+		/* CODIGO ANTIGO
 		var titulo = 0;
 		for (var i = 1 ; i<=3 ; i++){
 			titulo = document.querySelector(".titulo_resultado"+`${i}`);
 			titulo.classList.remove("invisivel");
-		};
-		document.querySelector(".valor_investido").textContent = `${valorInvestido.toFixed(2).replace(".",",")}`;
-		document.querySelector(".juros").textContent = `${juros.toFixed(2).replace(".",",")}`;
-		document.querySelector(".resultado").textContent = calcular.replace(".",",");
+		};*/
+		var titulo = document.querySelector("#resultadofinal");
+		titulo.classList.remove("invisivel");
+		document.querySelector(".valor_investido").textContent = `R$ ${investimento.toFixed(2).replace(".",",")}`;
+		document.querySelector(".juros").textContent = `R$ ${totalDeJuros.toFixed(2).replace(".",",")}`;
+		document.querySelector(".resultado").textContent = `R$ ${total.toFixed(2).replace(".",",")}`;
 	};
 };
 
